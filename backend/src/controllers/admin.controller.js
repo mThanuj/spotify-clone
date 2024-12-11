@@ -55,7 +55,6 @@ export const createSong = async (req, res, next) => {
       song,
     });
   } catch (err) {
-    console.error(`Error in createSong: ${err}`);
     next(err);
   }
 };
@@ -81,7 +80,6 @@ export const deleteSong = async (req, res, next) => {
       message: `Song deleted successfully`,
     });
   } catch (err) {
-    console.error(`Error in deleteSong: ${err}`);
     next(err);
   }
 };
@@ -107,7 +105,6 @@ export const createAlbum = async (req, res, next) => {
       album,
     });
   } catch (err) {
-    console.error(`Error in createAlbum: ${err}`);
     next(err);
   }
 };
@@ -124,7 +121,6 @@ export const deleteAlbum = async (req, res, next) => {
       message: `Album deleted successfully`,
     });
   } catch (err) {
-    console.error(`Error in deleteAlbum: ${err}`);
     next(err);
   }
 };

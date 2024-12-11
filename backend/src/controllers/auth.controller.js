@@ -18,7 +18,6 @@ export const authCallback = async (req, res, next) => {
       success: true,
     });
   } catch (err) {
-    console.error(`Error in auth callback: ${err}`);
     next(err);
   }
 };
