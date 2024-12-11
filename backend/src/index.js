@@ -7,6 +7,7 @@ import adminRouter from "./routes/admin.route.js";
 import albumRouter from "./routes/album.route.js";
 import statsRouter from "./routes/stat.route.js";
 import { connectDB } from "./lib/db.js";
+import { clerkMiddleware } from "@clerk/express";
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ const PORT = process.env.PORT;
 const app = express();
 
 app.use(express.json());
+app.use(clerkMiddleware());
 
 app.use("/api/users", userRouter);
 app.use("/api/auth", authRouter);
